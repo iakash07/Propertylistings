@@ -4,7 +4,7 @@
 Hotel Listings Management System
 The Hotel Listings Management System is a comprehensive platform designed to simplify the process of listing, searching, and managing hotel accommodations. This system is ideal for hotel managers, travel agents, and travelers looking to find suitable lodging options.
 
-Key Features:
+## Key Features
 Hotel Listings: Users can add, update, and remove hotel listings, including details such as location, price per night, room types, amenities, and hotel policies.
 
 User Management: Different user roles (admin, hotel manager, guest) with specific permissions to manage listings and make reservations.
@@ -22,8 +22,3 @@ Notifications and Alerts: Email and in-app notifications for new listings, booki
 Analytics Dashboard: Provides insights into booking trends, user engagement, and other relevant metrics.
 ## Website
 [Visit our website](https://getrentalproperty.netlify.app/)
-
-## Key Features
-- Feature 1
-- Feature 2
-- Feature 3
