@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listings</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <!-- Filters Section -->
+    <div class="filters">
+        <select id="location-filter" class="filter">
+            <option value="">Select Location</option>
+            <option value="beach">Beach</option>
+            <option value="city">City</option>
+            <option value="countryside">Countryside</option>
+            <option value="mountain">Mountain</option>
+        </select>
+
+        <input type="range" id="price-filter" class="filter" min="0" max="2000" step="50" value="2000">
+        <label for="price-filter">Price up to $<span id="price-value">2000</span></label>
+
+        <select id="bedrooms-filter" class="filter">
+            <option value="">Number of Bedrooms</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4+</option>
+        </select>
+
+        <div id="amenities-filter" class="filter">
+            <label><input type="checkbox" value="pool"> Pool</label>
+            <label><input type="checkbox" value="wifi"> WiFi</label>
+            <label><input type="checkbox" value="parking"> Parking</label>
+        </div>
+    </div>
+
+    <!-- Property Listings -->
+    <div class="property-container" id="property-container">
+        <!-- Property Card Template -->
+        <div class="property-card" data-location="beach" data-price="1200" data-bedrooms="3" data-amenities="pool,wifi">
+            <img src="Image/OceanVilla.jpg" alt="Oceanfront Villa">
+            <h2>Oceanfront Villa</h2>
+            <p>Experience luxury and tranquility in this stunning oceanfront villa...</p>
+            <p class="price">$1,200 per night</p>
+            <button class="book-now-button" data-id="1" data-title="Oceanfront Villa" data-price="1200">Book Now</button>
+        </div>
+
+        <div class="property-card" data-location="city" data-price="800" data-bedrooms="2" data-amenities="wifi">
+            <img src="Image/Cottage.jpg" alt="City Apartment">
+            <h2>City Apartment</h2>
+            <p>Modern apartment in the heart of the city with easy access to attractions...</p>
+            <p class="price">$800 per night</p>
+            <button class="book-now-button" data-id="2" data-title="City Apartment" data-price="800">Book Now</button>
+        </div>
+
+        <div class="property-card" data-location="countryside" data-price="600" data-bedrooms="4" data-amenities="pool,parking">
+            <img src="Image/urban loft.jpg" alt="Countryside House">
+            <h2>Countryside House</h2>
+            <p>Charming house in the countryside with spacious grounds and private pool...</p>
+            <p class="price">$600 per night</p>
+            <button class="book-now-button" data-id="3" data-title="Countryside House" data-price="600">Book Now</button>
+        </div>
+
+        <div class="property-card" data-location="mountain" data-price="1000" data-bedrooms="5" data-amenities="wifi,parking">
+            <img src="Image/Mountain Lodge.jpg" alt="Mountain Cabin">
+            <h2>Mountain Cabin</h2>
+            <p>Cozy cabin nestled in the mountains with breathtaking views and modern amenities...</p>
+            <p class="price">$1,000 per night</p>
+            <button class="book-now-button" data-id="4" data-title="Mountain Cabin" data-price="1000">Book Now</button>
+        </div>
+        <div class="property-card" data-location="mountain" data-price="1000" data-bedrooms="5" data-amenities="wifi,parking">
+            <img src="Image/Historic mansion.jpg" alt="Mountain Cabin">
+            <h2>Historic Mansion</h2>
+            <p>Step back in time with this grand historic mansion. Featuring classic architecture, antique furnishings, and beautifully landscaped gardens, it provides a luxurious and nostalgic stay</p>
+            <p class="price">$1,300 per night</p>
+            <button class="book-now-button" data-id="5" data-title="Mountain Cabin" data-price="1300">Book Now</button>
+        </div>
+        <!-- Add more property cards as needed -->
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart" id="cart">
+        <h2>Booking Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total Cost: $<span id="cart-total">0</span></p>
+        <button id="checkout-button" class="checkout-button">Checkout</button>
+    </div>
+
+    <!-- Checkout Section -->
+    <div class="checkout-container" id="checkout-container" style="display: none;">
+        <h1>Checkout</h1>
+        <div class="checkout-details">
+            <h2>Booking Summary</h2>
+            <div id="checkout-items"></div>
+            <p>Total Cost: $<span id="checkout-total">0</span></p>
+        </div>
+        <form id="checkout-form" class="checkout-form">
+            <h2>Contact Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your Full Name">
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email Address">
+    
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+    
+            <h2>Payment Details</h2>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required placeholder="Card Number">
+    
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="text" id="expiry-date" name="expiry-date" required placeholder="MM/YY">
+    
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required placeholder="CVV">
+    
+            <button type="submit" class="submit-button">Complete Booking</button>
+        </form>
+    </div>
+    
+    <script src="Script.js"></script>
+</body>
+</html>
